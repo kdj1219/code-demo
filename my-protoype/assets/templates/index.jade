@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Prototype Example
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+
+    // build:js js/modernizr.js
+    script(src='bower_components/modernizr/modernizr.js')
+    // endbuild
+
+    // build:css css/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+
+    // build:css css/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+  body
+
+    h1
+      span.glyphicon.glyphicon-plus
+      | Prototype Example
+
+    // build:js js/vendor.js
+    // bower:js
+    // endbower
+    // endbuild
+
+    //- App
+    // build:js js/app.js
+    script(src='scripts/app.js')
+    //endbuild

@@ -1,0 +1,25 @@
+{
+    "name": "jaceju/web-prototype",
+    "version": "0.1.0",
+    "description": "Skeleton for create a website prototype.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jace Ju",
+            "email": "jaceju@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "scripts": {
+        "post-create-project-cmd": [
+            "bundle install --path=.bundle",
+            "npm install",
+            "./node_modules/bower/bin/bower install",
+            "./node_modules/gulp/bin/gulp.js"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

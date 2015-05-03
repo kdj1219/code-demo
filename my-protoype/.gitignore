@@ -1,0 +1,16 @@
+/public/*.html
+/public/styles
+/public/scripts
+/public/css
+/public/js
+/public/fonts
+/public/images
+/public/bower_components
+/node_modules
+/styleguide
+/vendor/
+/.bundle
+/.sass-cache
+.DS_Store
+Thumbs.db
+Gemfile.lock
