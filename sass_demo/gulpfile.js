@@ -120,7 +120,7 @@ gulp.task('prepare', function (cb) {
 //安装启动一个本地服务器 sudo npm install gulp-connect --save-dev
 gulp.task('server', function() {
     $.connect.server({
-        root: './',
+        root: '.',
         livereload: true    //实时预览
     });
 });
