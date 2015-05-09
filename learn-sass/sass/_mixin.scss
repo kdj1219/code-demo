@@ -1,0 +1,24 @@
+//响应式@media
+@mixin col-sm ($width: 50%) {
+  //参数校验
+  @if type-of($width) != number {
+    @error "$width必须是一个数值类型， 你输入的$width是: #{$width}.";
+  }
+
+  //unitless判断是否带有单位 unitless函数
+  @if unitless($width) {
+    @warn "$width应该是一个百分值, 你输入width是: #{$width}.";
+    $width: (percentage($width) / 100); //转换成百分比
+  } @else {
+    //判断单位是否为百分号 unit函数
+    @if unit($width) != "%" {
+      @error "$width应该是一个百分值, 你输入width是: #{$width}.";
+    }
+  }
+
+  //当屏幕分辨率大于768像素时 占宽=$width的值
+  @media (min-width: 768px) {
+    width: $width;
+    float: left;
+  }
+}
