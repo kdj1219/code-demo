@@ -45,12 +45,13 @@ function pic_rsort(n) {
     //去除海报上原有的photo-center
     photos.each(function(idx,el){
         $(el).removeClass('photo-back photo-center')
+            .unbind('mouseenter mouseleave')
             .css({
                 'left':'',
                 'top':'',
-                '-moz-transform': 'rotate(360deg) scale(1.4)',
-                '-webkit-transform': 'rotate(360deg) scale(1.4)',
-                'transform': 'rotate(360deg) scale(1.4)'
+                '-moz-transform': 'rotate(360deg) scale(1.3)',
+                '-webkit-transform': 'rotate(360deg) scale(1.3)',
+                'transform': 'rotate(360deg) scale(1.3)'
             });
 
     });
@@ -58,6 +59,19 @@ function pic_rsort(n) {
     //加上新的选中海报
     var photo_center = $('#photo_'+n);
     photo_center.addClass('photo-center');
+    photo_center.hover(function(){
+        $(this).css({
+            '-moz-transform': 'scale(1.8)',
+            '-webkit-transform': 'scale(1.8)',
+            'transform': 'scale(1.8)'
+        });
+    },function(){
+        $(this).css({
+            '-moz-transform': 'scale(1.3)',
+            '-webkit-transform': 'scale(1.3)',
+            'transform': 'scale(1.3)'
+        });
+    });
 
     //把不是居中的元素提取出来
     var not_center_photos = photos.not('.photo-center');
