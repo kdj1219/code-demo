@@ -288,17 +288,6 @@ th {
   padding: 0;
 }
 
-/* line 48, logo/*.png */
-.logo-sprite, .logo-1 {
-  background-image: url('/images/logo-s892a74a30e.png');
-  background-repeat: no-repeat;
-}
-
-/* line 84, ../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.logo-1 {
-  background-position: 0 0;
-}
-
 /**
  *  部分引入normalize中的模块，一共有八大模块
  * @import "normalize-version";
@@ -306,57 +295,62 @@ th {
  * @import "normalize/html5";
  * @import "normalize/links";
  */
+/* line 37, ../sass/screen.scss */
+body {
+  background-image: url('../images/logo.png?1431119323');
+}
+
 /* 主标题样式 */
-/* line 39, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .headline {
   font-family: Braggadocio, Arial, Verdana, Helvetica, sans-serif;
 }
 
 /* 页面主体内容样式 @at-root明确指示输出到顶层 非组合选择器 */
-/* line 44, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .main-sec {
   font-family: Arial, Verdana, Helvetica, sans-serif;
 }
-/* line 48, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .main-sec-headline {
   font-family: Arial, Verdana, Helvetica, sans-serif;
   font-size: 16px;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 .main-sec-detail {
   font-size: 12px;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 p {
   color: #7f00ff;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .webdemo-sec {
   -moz-box-shadow: 1px 1px 3px 2px #cfcecf;
   -webkit-box-shadow: 1px 1px 3px 2px #cfcecf;
   box-shadow: 1px 1px 3px 2px #cfcecf;
 }
 @media (min-width: 768px) {
-  /* line 65, ../sass/screen.scss */
+  /* line 68, ../sass/screen.scss */
   .webdemo-sec {
     width: 50%;
     float: left;
   }
 }
-/* line 71, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .webdemo-sec:hover {
   background-color: #f5f5f5;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .serious-error {
   color: #f00;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .serious-error {
   border: 1px #f00;
 }
