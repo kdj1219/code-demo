@@ -61,10 +61,20 @@ function pic_rsort(n) {
 
     //把不是居中的元素提取出来
     var not_center_photos = photos.not('.photo-center');
+
+    /** 环绕效果 **/
+    //$(not_center_photos).each(function(idx,el){
+    //    $(el).css({
+    //        '-moz-transform': 'rotate('+ (idx+1)*23 +'deg) translateY(500px) scale(1)',
+    //        '-webkit-transform': 'rotate('+ (idx+1)*23 +'deg) translateY(500px) scale(1)',
+    //        'transform': 'rotate('+ (idx+1)*23 +'deg) translateY(500px) scale(1)'
+    //    });
+    //});
+
+    /** 散列效果 **/
     //把海报分为左右两个区
     var photos_left = not_center_photos.splice(0,Math.ceil(not_center_photos.length/2));
     var photos_right = not_center_photos;
-
     //设置左分区样式
     var ranges = range();
     $(photos_left).each(function(idx,el){
@@ -121,6 +131,19 @@ function range() {
 
     range.wrap = wrap;
     range.photo = photo;
+    /**
+     *  小范围
+    **/
+    //左分区
+    //range.left.x = [photo.w, wrap.w/2-photo.w/2];
+    //range.left.y = [photo.h, wrap.h-photo.h];
+    ////右分区
+    //range.right.x = [wrap.w/2+photo.w/2, wrap.w-photo.w];
+    //range.right.y = range.left.y;
+
+    /**
+     *  大范围
+     **/
     //左分区
     range.left.x = [0-photo.w, wrap.w/2-photo.w/2];
     range.left.y = [0-photo.h, wrap.h];
