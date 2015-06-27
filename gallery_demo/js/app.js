@@ -31,9 +31,11 @@ function turn(elem) {
     if( elem.hasClass('photo-front')) {
         elem.removeClass('photo-front').addClass('photo-back');
         $('#nav_'+n).addClass('i-back');
+        elem.find('.side-front').css('z-index', 0);
     } else {
         elem.removeClass('photo-back').addClass('photo-front');
         $('#nav_'+n).removeClass('i-back');
+        elem.find('.side-front').css('z-index', 1);
     }
 
 }
@@ -167,4 +169,3 @@ function range() {
 
     return range;
 }
-
